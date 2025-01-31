@@ -162,7 +162,7 @@ ifeq (64,$(BITS))
 endif
 SSE_FLAG=-msse2
 
-DEBUG_FLAGS    = -O0 -g3 $(BIToS_FLAG) $(SSE_FLAG) -std=c++11
+DEBUG_FLAGS    = -Og -g3 -ggdb $(BIToS_FLAG) $(SSE_FLAG) -std=c++11
 DEBUG_DEFS     = -DCOMPILER_OPTIONS="\"$(DEBUG_FLAGS) $(EXTRA_FLAGS)\""
 RELEASE_FLAGS  = -O3 $(BITS_FLAG) $(SSE_FLAG) -funroll-loops -g3 -std=c++11
 RELEASE_DEFS   = -DCOMPILER_OPTIONS="\"$(RELEASE_FLAGS) $(EXTRA_FLAGS)\""
