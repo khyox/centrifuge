@@ -679,8 +679,8 @@ int centrifuge_build(int argc, const char **argv) {
                                            infiles,
                                            conversion_table_fname,
                                            taxonomy_fname,
-                                           size_table_fname,
-                                           name_table_fname,
+                                           size_table_fname, // but def expects name_table_fname
+                                           name_table_fname, // but def expects size_table_fname
                                            outfile,
                                            false,
                                            REF_READ_FORWARD);
@@ -699,8 +699,8 @@ int centrifuge_build(int argc, const char **argv) {
                                      infiles,
                                      conversion_table_fname,
                                      taxonomy_fname,
-                                     name_table_fname,
-                                     size_table_fname,
+                                     size_table_fname, // but def expects name_table_fname
+                                     name_table_fname, // but def expects size_table_fname									 
                                      outfile,
                                      true,
                                      REF_READ_FORWARD);
